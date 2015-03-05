@@ -30,16 +30,17 @@ module.exports = function() {
     __private__.config = lodash.merge(__private__.defaults, JSON.parse(fs.readFileSync(config, { encoding: 'utf-8' })));
   }
 
-  var files = lib.match({
-    applicationPath: __private__.config.applicationPath,
-    files: lib.finder({ dir: __private__.config.testFolderPath }),
-    testFilePostFix: __private__.config.testFilePostfix,
-    folder: folder,
-    query: query
-  });
+  var allFiles = lib.finder({ dir: __private__.config.testFolderPath }),
+    matchedFiles = lib.match({
+      applicationPath: __private__.config.applicationPath,
+      files: allFiles,
+      testFilePostFix: __private__.config.testFilePostfix,
+      folder: folder,
+      query: query
+    });
 
   lib.runner.run({
     config: __private__.config,
-    files: files
+    files: matchedFiles
   });
 };
