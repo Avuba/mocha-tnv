@@ -11,9 +11,9 @@ var path = require('path'),
   __private__ = {};
 
 
-__private__.config = {
+__private__.defaults = {
   processes: 2,
-  testFilePostfix: /.test/gi,
+  testFilePostfix: /.test.js/gi,
   applicationPath: path.normalize(__dirname + '/../../'),
   testFolderPath: path.normalize(__dirname + '/../../test'),
   utilsPath: path.normalize(__dirname + '/../../test/utils.js'),
@@ -22,14 +22,20 @@ __private__.config = {
 
 
 module.exports = function() {
-  if (argv.config) {
-    __private__.config = lodash.merge(__private__.config, JSON.parse(fs.readFileSync(argv.config, { encoding: 'utf-8' })));
+  var config = argv.config,
+    query = argv.query,
+    folder = argv.folder;
+
+  if (config) {
+    __private__.config = lodash.merge(__private__.defaults, JSON.parse(fs.readFileSync(config, { encoding: 'utf-8' })));
   }
 
   var files = lib.match({
+    applicationPath: __private__.config.applicationPath,
     files: lib.finder({ dir: __private__.config.testFolderPath }),
     testFilePostFix: __private__.config.testFilePostfix,
-    query: argv.query
+    folder: folder,
+    query: query
   });
 
   lib.runner.run({
