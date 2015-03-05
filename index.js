@@ -15,7 +15,7 @@ __private__.config = {
   processes: 2,
   testFilePostfix: /.test/gi,
   applicationPath: path.normalize(__dirname + '/../../'),
-  testPath: path.normalize(__dirname + '/../../test'),
+  testFolderPath: path.normalize(__dirname + '/../../test'),
   utilsPath: path.normalize(__dirname + '/../../test/utils.js'),
   nodeModulesPath: path.normalize(__dirname + '/../../node_modules')
 };
@@ -27,11 +27,9 @@ module.exports = function() {
   }
 
   var files = lib.match({
-    files: lib.finder({ dir: __private__.config.testPath }),
-    match: argv.query,
-    isTestFile: function(file) {
-      return file.match(__private__.config.testFilePostfix);
-    }
+    files: lib.finder({ dir: __private__.config.testFolderPath }),
+    testFilePostFix: __private__.config.testFilePostfix,
+    query: argv.query
   });
 
   lib.runner.run({
