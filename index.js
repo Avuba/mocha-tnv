@@ -17,7 +17,8 @@ __private__.defaults = {
   applicationPath: path.normalize(__dirname + '/../../'),
   testFolderPath: path.normalize(__dirname + '/../../test'),
   utilsPath: path.normalize(__dirname + '/../../test/utils.js'),
-  nodeModulesPath: path.normalize(__dirname + '/../../node_modules')
+  nodeModulesPath: path.normalize(__dirname + '/../../node_modules'),
+  database: 'test'
 };
 
 
