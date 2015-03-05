@@ -1,5 +1,6 @@
 #### mocha-tnv
-
+- run your tests on multiple processes
+- run your tests with query magic
 
 
 ### Usage
