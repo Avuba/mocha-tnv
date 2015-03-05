@@ -52,3 +52,4 @@ ln -S /usr/bin/tnv .../node_modules/mocha-tnv/bin/tnv [optional]
 - NODE_ENV NODE_PORT dynamic
 - query subfolders?
 - basic set for utils
+- debug mode to show console logs
