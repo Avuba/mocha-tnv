@@ -34,10 +34,8 @@ module.exports = function() {
   }
 
   var files = finder({ dir: __private__.config.testPath });
-  console.log(files);
-  return;
   runner.run({
     config: __private__.config,
-    files: argv._
+    files: files
   });
 };
