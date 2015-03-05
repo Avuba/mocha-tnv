@@ -14,7 +14,7 @@ Override defaults with --config=path-to-json
 
 ### Utils
 
-Define utils.js (or override path in your config json)
+Define your own utils.js or use existing set (or override path in your config json)
 ```
   export.connect = ...
   export.request = ...
@@ -23,7 +23,10 @@ Define utils.js (or override path in your config json)
 In test file:
 ```
   describe('test', function(tnv) {
+    // use your own utils fns
     tnv.connect()
+    // use existing utils fns
+    tnv.clearCache()
   });
 ```
 
@@ -48,3 +51,4 @@ ln -S /usr/bin/tnv .../node_modules/mocha-tnv/bin/tnv [optional]
 - add as npm package (add deps before)
 - NODE_ENV NODE_PORT dynamic
 - query subfolders?
+- basic set for utils
