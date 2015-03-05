@@ -45,8 +45,6 @@ ln -S /usr/bin/tnv .../node_modules/mocha-tnv/bin/tnv [optional]
 
 
 ### TODO's
-- add log level
-- add remote flag
 - write tests
 - add as npm package (add deps before)
 - NODE_ENV NODE_PORT dynamic
