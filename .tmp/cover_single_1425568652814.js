@@ -1,1 +1,0 @@
-var tnv = require("/Users/kirrg/dev/avuba/avb-api-v2/test/utils.js"); var lodash = require("lodash"); var copyOfDescribe = lodash.cloneDeep(describe); describe = function(title, done) { copyOfDescribe(title, function() { return done.call(this, tnv); }); }; require("t");
