@@ -16,3 +16,4 @@ node_modules/mocha-tnv/bin/tnv --config=test/tnv.json --query=login --folder=use
 - add log level
 - add remote flag
 - write tests
+- add as npm package (add deps before)
