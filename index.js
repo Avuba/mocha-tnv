@@ -30,6 +30,9 @@ module.exports = function() {
   if (config) {
     __private__.config = lodash.merge(__private__.defaults, JSON.parse(fs.readFileSync(config, { encoding: 'utf-8' })));
   }
+  else {
+    __private__.config = __private__.defaults;
+  }
 
   var allFiles = lib.finder({ dir: __private__.config.testFolderPath }),
     matchedFiles = lib.match({

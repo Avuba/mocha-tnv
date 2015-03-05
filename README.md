@@ -3,6 +3,31 @@
 - run your tests with query magic
 
 
+### Config
+Override defaults with --config=path-to-json
+```
+{
+  processes: 8  // run tests in parallel with 8 processes
+}
+```
+
+
+### Utils
+
+Define utils.js (or override path in your config json)
+```
+  export.connect = ...
+  export.request = ...
+```
+
+In test file:
+```
+  describe('test', function(tnv) {
+    tnv.connect()
+  });
+```
+
+
 ### Usage
 ````
 node_modules/mocha-tnv/bin/tnv
@@ -21,3 +46,5 @@ ln -S /usr/bin/tnv .../node_modules/mocha-tnv/bin/tnv [optional]
 - add remote flag
 - write tests
 - add as npm package (add deps before)
+- NODE_ENV NODE_PORT dynamic
+- query subfolders?
