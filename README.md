@@ -44,15 +44,3 @@ node_modules/mocha-tnv/bin/tnv --config=test/tnv.json --folder=user
 
 ln -S /usr/bin/tnv .../node_modules/mocha-tnv/bin/tnv [optional]
 ````
-
-
-
-### TODO's
-- write tests
-- add as npm package (add deps before)
-- NODE_ENV NODE_PORT dynamic
-- query subfolders?
-- basic set for utils
-- debug mode to show console logs
-- knowledge for parallel running
-- license?
