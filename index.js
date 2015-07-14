@@ -16,7 +16,7 @@ __private__.defaults = {
   testFilePostfix: /.test.js/gi,
   applicationPath: path.normalize(__dirname + '/../../'),
   testFolderPath: path.normalize(__dirname + '/../../test'),
-  utilsPath: path.normalize(__dirname + '/../../test/utils.js'),
+  utilsPath: path.normalize(__dirname + '/../../test/utils'),
   nodeModulesPath: path.normalize(__dirname + '/../../node_modules'),
   database: 'test'
 };
