@@ -3,6 +3,7 @@
   "version": "1.0.10",
   "description": "mocha test envirnoment tools",
   "dependencies": {
+    "lodash": "^3.10.0",
     "mocha": "*",
     "optimist": "^0.6.1"
   },
