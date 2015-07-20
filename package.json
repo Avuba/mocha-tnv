@@ -1,6 +1,6 @@
 {
   "name": "mocha-tnv",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "mocha test envirnoment tools",
   "dependencies": {
     "async": "^1.4.0",
