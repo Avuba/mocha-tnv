@@ -5,7 +5,7 @@
   "dependencies": {
     "async": "^1.4.0",
     "lodash": "^3.10.0",
-    "mocha": "*",
+    "mocha": "2.2.5",
     "moment": "^2.10.3",
     "optimist": "^0.6.1"
   },
