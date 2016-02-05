@@ -25,6 +25,7 @@ __private__.defaults = {
 module.exports = function() {
   var config = argv.config,
     query = argv.query,
+    exclude = argv.exclude,
     folder = argv.folder;
 
   if (config) {
@@ -39,6 +40,7 @@ module.exports = function() {
       applicationPath: __private__.config.applicationPath,
       files: allFiles,
       testFilePostFix: __private__.config.testFilePostfix,
+      exclude: exclude,
       folder: folder,
       query: query
     });
