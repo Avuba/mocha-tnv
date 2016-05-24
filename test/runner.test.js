@@ -13,7 +13,8 @@ describe('UNIT: runner', function() {
         this.timeout(1000 * 10);
 
         lib.runner.run({
-            files: [__dirname + '/assets/test1.js', __dirname + '/assets/test2.js'],
+            // files: [__dirname + '/assets/test1.js', __dirname + '/assets/test2.js'],
+            files: [__dirname + '/assets/test2.js'],
             config: {
                 processes: 2,
                 nodeModulesPath: path.normalize(__dirname),
